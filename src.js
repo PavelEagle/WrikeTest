@@ -1,4 +1,5 @@
 
+
 var toggler = document.getElementsByClassName("caret");
 var i;
 
@@ -18,17 +19,13 @@ const tree = JSON.parse(http.responseText);
 
 console.log(tree);
 
-// console.log();
+let mainTree = Object.values(tree).filter(x=>x.parentId==null);
 
-//   tree.forEach(function (key) { 
-//         console.log(key.title);
-//         let test = document.getElementById('test');
-//         let liObj = document.createElement('li');
-//         liObj.innerText= key.title;
-//         test.appendChild(liObj); 
-//   });
+let sortTree = Object.values(tree).filter(x=>x.parentId!=null).sort((a,b)=>a.parentId-b.parentId);
 
+let total = {...mainTree, ...sortTree};
 
+console.log(total);
 
 tree.forEach(function (key) { 
     // console.log(key.parentId);
@@ -52,4 +49,5 @@ tree.forEach(function (key) {
 
 
 // http.onload = () => console.log(response1);
+
 
