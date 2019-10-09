@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Changa:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Wrike Test </h2>
-  <h3>Tree View from JSON</h3>
-  <div id='tree'>
-</div>
-<script src="src.js"></script>
-<script src="caret.js"></script>
+  <header>
+      <h1>Wrike Test </h1>
+      <h2>Tree View from JSON</h2>
+      <div class='buttons-container'>
+        <button onclick="sortAZ()">Sort A-Z</button>
+        <button onclick="sortZA()">Sort Z-A</button>
+      </div>  
+  </header>
+  <div id='content'>
+      <div id='tree'></div>
+  </div>
+<script src="treeCreating.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

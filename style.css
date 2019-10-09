@@ -1,37 +1,79 @@
-ul, #myUL {
-    list-style-type: none;
-  }
-  
-  #myUL {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .caret {
-    cursor: pointer;
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none;
-  }
-  
-  .caret::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  .caret-down::before {
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */
-    transform: rotate(90deg);  
-  }
-  
-  .nested {
-    display: none;
-  }
-  
-  .active {
-    display: block;
-  }
+header {
+  font-family: 'Noto Sans KR', sans-serif;
+  position: relative;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.buttons-container {
+  position: absolute;
+  left: 25px;
+}
+
+button {
+  background-color: #c9c9c9;
+  border-radius: 10px;
+  width: 120px;
+  outline: none;   /* Убираем выделение*/
+  font-size: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
+#content {
+  position: relative;
+}
+
+#tree {
+  font-family: 'Changa', sans-serif;
+  font-size: 25px;
+  position: absolute;
+  top: 25px;
+}
+
+ul {
+  list-style-type: none;  /* Убираем точки*/
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Не выделяем текст*/
+}
+
+.caret:hover {
+  color:red;
+}
+
+.caret::before {
+  content: "\27A2";
+  color: black;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.caret:hover::before {
+  color: red;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
