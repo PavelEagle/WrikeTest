@@ -1,6 +1,6 @@
 const http = new XMLHttpRequest();
 
-http.open("GET", "test1.json",false); // Тестовый JSON файл
+// http.open("GET", "test1.json",false); // Тестовый JSON файл
 http.open("GET", "https://raw.githubusercontent.com/wrike/frontend-test/master/data.json",false); // Отправляем get запрос на url
 http.send(); // Получаем запрос
 
